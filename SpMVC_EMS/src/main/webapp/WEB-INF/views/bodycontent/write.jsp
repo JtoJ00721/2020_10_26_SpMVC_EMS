@@ -152,25 +152,33 @@ html, body {
 
 		<div>
 			<label for="s_content">내용용이</label>
-			<form:input id="s_content" path="s_content" placeholder="내용용이" />
+			<form:textarea id="s_content" rows="5" cols="80" path="s_content"/>
 		</div>
 
 		<div class="btn-box">
 			<button id="btn_list" type="button" onclick="tolist()">리스트로</button>
-			<button id="btn_save" type="button" onclick="saveData()">저장</button>
+			<button id="btn_save" type="submit">저장</button>
 		</div>
 	</fieldset>
 </form:form>
 
 <script>
-	function tolist() {		
+	function tolist() {
 		document.location.href = "${rootPath}"
 	}
-	
-	function saveData() {
-		let from_email = document.getElementById("form_email");
-		let to_email = document.getElementById("to_email");
-		let s_subject = document.getElementById("s_subject");
-		let s_content = document.getElementById("s_content");
-	}
+
+//	function saveData() {
+//		let from_email = document.getElementById("form_email");
+//		let to_email = document.getElementById("to_email");
+//		let s_subject = document.getElementById("s_subject");
+//		let s_content = document.getElementById("s_content");
+//		
+//		alert(from_email);
+		
+//		if(from_email == "" || from_email == null ) {
+//			alert("발송 이메일을 입력해주세요 ><");
+//		} 
+		
+		
+//	}   onclick="saveData()"
 </script>
